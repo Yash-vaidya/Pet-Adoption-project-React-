@@ -11,7 +11,7 @@ const AdminLogin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (credentials.id === "admin" && credentials.password === "1234") {
+    if (credentials.id === "yash" && credentials.password === "mayuri") {
       navigate("/admin/dashboard");
     } else {
       alert("Invalid ID or Password");
@@ -24,13 +24,29 @@ const AdminLogin = () => {
       <form onSubmit={handleSubmit} className="w-50 mx-auto">
         <div className="mb-3">
           <label className="form-label">Admin ID</label>
-          <input type="text" className="form-control" name="id" value={credentials.id} onChange={handleChange} required />
+          <input
+            type="text"
+            className="form-control"
+            name="id"
+            value={credentials.id}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="mb-3">
           <label className="form-label">Password</label>
-          <input type="password" className="form-control" name="password" value={credentials.password} onChange={handleChange} required />
+          <input
+            type="password"
+            className="form-control"
+            name="password"
+            value={credentials.password}
+            onChange={handleChange}
+            required
+          />
         </div>
-        <button className="btn btn-primary" type="submit">Login</button>
+        <button className="btn btn-primary" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );

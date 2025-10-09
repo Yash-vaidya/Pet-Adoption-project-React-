@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import kitty from "../assets/imgs/kitty.png";
 import bunny from "../assets/imgs/dogg.png";
 import bear from "../assets/imgs/bear.png";
+import About from "./About";
 
 const Home = () => {
   return (

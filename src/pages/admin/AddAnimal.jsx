@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const AddAnimal = () => {
   const [animal, setAnimal] = useState({
@@ -14,16 +15,30 @@ const AddAnimal = () => {
     setAnimal({ ...animal, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("✅ Animal added successfully (static form)");
-    console.log("Animal Details:", animal);
-    // later you can post this data using axios to JSON server
+
+    try {
+      await axios.post("http://localhost:3000/animals", animal);
+
+      alert("Animal added successfully!");
+      setAnimal({
+        name: "",
+        age: "",
+        breed: "",
+        price: "",
+        stock: "",
+        img: "",
+      });
+    } catch (err) {
+      console.error("Error adding animal:", err);
+      alert("Failed to add animal. Make sure JSON Server is running.");
+    }
   };
 
   return (
     <div className="container my-5">
-      <h2 className="text-center mb-4 text-primary">➕ Add New Animal</h2>
+      <h2 className="text-center mb-4 text-primary">Add New Animal</h2>
 
       <form
         onSubmit={handleSubmit}
@@ -42,7 +57,6 @@ const AddAnimal = () => {
             required
           />
         </div>
-
         <div className="mb-3">
           <label className="form-label fw-bold">Age</label>
           <input
@@ -55,7 +69,6 @@ const AddAnimal = () => {
             required
           />
         </div>
-
         <div className="mb-3">
           <label className="form-label fw-bold">Breed</label>
           <input
@@ -68,7 +81,6 @@ const AddAnimal = () => {
             required
           />
         </div>
-
         <div className="mb-3">
           <label className="form-label fw-bold">Price (₹)</label>
           <input
@@ -81,7 +93,6 @@ const AddAnimal = () => {
             required
           />
         </div>
-
         <div className="mb-3">
           <label className="form-label fw-bold">Stock</label>
           <input
@@ -94,7 +105,6 @@ const AddAnimal = () => {
             required
           />
         </div>
-
         <div className="mb-3">
           <label className="form-label fw-bold">Image URL</label>
           <input
@@ -108,7 +118,7 @@ const AddAnimal = () => {
         </div>
 
         <button type="submit" className="btn btn-success w-100 fw-bold">
-          Add Animal 🐾
+          Add Animal
         </button>
       </form>
     </div>
