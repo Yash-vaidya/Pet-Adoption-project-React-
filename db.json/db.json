@@ -1,0 +1,8 @@
+{
+  "animals": [
+    { "id": 1, "name": "Buddy", "age": "2 years", "breed": "Labrador", "stock": 3 },
+    { "id": 2, "name": "Kitty", "age": "1 year", "breed": "Persian Cat", "stock": 5 },
+    { "id": 3, "name": "Bear", "age": "3 years", "breed": "Brown Bear", "stock": 1 }
+  ],
+  "adoptions": []
+}
