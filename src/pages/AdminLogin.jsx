@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./AdminLogin.css";
 
 const AdminLogin = () => {
   const [credentials, setCredentials] = useState({ id: "", password: "" });
@@ -19,35 +20,35 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2>Admin Login</h2>
-      <form onSubmit={handleSubmit} className="w-50 mx-auto">
-        <div className="mb-3">
-          <label className="form-label">Admin ID</label>
-          <input
-            type="text"
-            className="form-control"
-            name="id"
-            value={credentials.id}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            name="password"
-            value={credentials.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button className="btn btn-primary" type="submit">
-          Login
-        </button>
-      </form>
+    <div className="admin-login-container">
+      <div className="admin-login-card shadow-sm">
+        <h2 className="text-center mb-4">Admin Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Admin ID</label>
+            <input
+              type="text"
+              className="form-control neon-input"
+              name="id"
+              value={credentials.id}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input
+              type="password"
+              className="form-control neon-input"
+              name="password"
+              value={credentials.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button className="btn btn-success w-100 mt-3">Login</button>
+        </form>
+      </div>
     </div>
   );
 };

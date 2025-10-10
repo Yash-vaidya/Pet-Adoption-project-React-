@@ -1,21 +1,21 @@
 {
   "animals": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Buddy",
       "age": "2 years",
       "breed": "Labrador",
       "stock": 3
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Kitty",
       "age": "1 year",
       "breed": "Persian Cat",
       "stock": 5
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bear",
       "age": "3 years",
       "breed": "Brown Bear",
@@ -29,12 +29,47 @@
       "price": "4398",
       "stock": "10",
       "img": ""
+    },
+    {
+      "id": "129c",
+      "name": "snake ",
+      "age": "1",
+      "breed": "balck mamba",
+      "price": "10000",
+      "stock": "11",
+      "img": ""
+    },
+    {
+      "id": "e613",
+      "name": "Dog ",
+      "age": "1 year",
+      "breed": "haskey",
+      "price": "30000",
+      "stock": "12",
+      "img": ""
     }
   ],
-  "adoptions": [],
+  "adoptions": [
+    {
+      "id": "c084",
+      "name": "vishavdip devanand vaidya ",
+      "email": "yashvaidya9623@gmail.com",
+      "mobile": "9422189146",
+      "photo": "pexels-itfeelslikefilm-3634929.jpg",
+      "animal": "Beagle"
+    },
+    {
+      "id": "06b1",
+      "name": "vishavdip devanand vaidya ",
+      "email": "yashvaidya9623@gmail.com",
+      "mobile": "9422189146",
+      "photo": "24377-2560x1600-desktop-hd-dog-wallpaper.jpg",
+      "animal": "Beagle"
+    }
+  ],
   "sold": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Coco",
       "category": "Bird",
       "buyer": "Rohan"

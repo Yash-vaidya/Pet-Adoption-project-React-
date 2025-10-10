@@ -1,0 +1,38 @@
+.adoptpet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180vh;
+  background: #000;
+  padding: 20px;
+}
+
+.adoptpet-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.4s ease;
+}
+
+.adoptpet-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.adoptpet-card h2 {
+  font-weight: 700;
+  color: #333;
+}
+
+.neon-input {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.neon-input:focus {
+  border-color: #90ee90;
+  box-shadow: 0 0 8px #90ee90;
+  outline: none;
+}

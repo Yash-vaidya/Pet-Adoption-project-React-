@@ -1,3 +1,4 @@
+/* -------------------- Existing Styles -------------------- */
 .animal-card {
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -7,6 +8,7 @@
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .contact-container {
   display: flex;
   justify-content: space-between;
@@ -14,7 +16,6 @@
   padding: 30px;
   margin: 50px auto;
   width: 80%;
-  /* background-color: #fff5f5; */
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
@@ -38,7 +39,7 @@
 }
 
 .contact-container:hover .contact-left {
-  color: #e63946; 
+  color: #e63946;
 }
 
 .contact-right h2 {
@@ -60,4 +61,45 @@
     border-right: none;
     border-bottom: 2px solid #ffd6d6;
   }
+}
+
+/* -------------------- Neon Light Green Hover -------------------- */
+.neon-hover-dark {
+  color: #222; /* dark default text */
+  transition: all 0.4s ease;
+}
+
+.neon-hover-dark:hover {
+  color: #90ee90; /* light green */
+  text-shadow: 0 0 8px #90ee90, 0 0 15px #90ee90, 0 0 25px #32cd32,
+               0 0 50px #32cd32;
+  transform: scale(1.05);
+}
+
+/* -------------------- Pastel Animal Cards -------------------- */
+.pastel-card {
+  transition: all 0.4s ease;
+}
+
+.pastel-card:hover {
+  background-color: #90ee90; /* light green on hover */
+  box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
+  transform: scale(1.05);
+}
+/* -------------------- Pastel Animal Cards -------------------- */
+.pastel-card {
+  transition: all 0.4s ease;
+}
+
+.pastel-card:hover {
+  background-color: #90ee90; /* light green on hover */
+  box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
+  transform: scale(1.05);
+}
+
+/* Remove neon effect from card text */
+.pastel-card .neon-hover-dark:hover {
+  color: inherit; /* Keep original text color */
+  text-shadow: none; /* Remove glow from text */
+  transform: none; /* Remove text scaling */
 }

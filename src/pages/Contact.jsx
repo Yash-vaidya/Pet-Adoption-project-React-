@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Contact.css";
+
 import buddy from "../assets/imgs/dogg.png";
 import kitty from "../assets/imgs/kitty.png";
 import bear from "../assets/imgs/bear.png";
@@ -13,6 +16,10 @@ import german from "../assets/imgs/german.png";
 import Beagle from "../assets/imgs/Beagle.png";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const animals = [
     {
       id: 1,
@@ -106,19 +113,17 @@ const Contact = () => {
     },
   ];
 
-  const [selectedAnimal, setSelectedAnimal] = useState(null);
-
   return (
     <div className="container my-5">
-      <h2 className="mb-4 text-center fw-bold text-primary">
+      <h2 className="mb-4 text-center fw-bold text-dark neon-hover-dark">
         🐾 Adopt a Friend 🐾
       </h2>
-      <p className="text-center mb-5 fs-5 text-muted">
+      <p className="text-center mb-5 fs-5 text-dark neon-hover-dark">
         Select your companion and give them a loving home.
       </p>
 
       <div className="contact-container">
-        <div className="contact-left">
+        <div className="contact-left neon-hover-dark">
           <h2>Contact Us</h2>
           <p>
             <strong>Name:</strong> Vishavdip Devanand Vaidya
@@ -127,60 +132,65 @@ const Contact = () => {
             <strong>Address:</strong> Aurangabad, Maharashtra, India
           </p>
           <p>
-            <strong>Phone:</strong> +91 9623XXXXXX
+            <strong>Phone:</strong> +91 9422189146
           </p>
           <p>
             <strong>Email:</strong> yashvaidya9623@gmail.com
           </p>
         </div>
 
-        <div className="contact-right">
-          <h2>Adopt, Don’t Shop ❤️</h2>
-          <p>
+        <div className="contact-right neon-hover-dark">
+          <h2>Adopt, Shop ❤️</h2>
+          <h4 className="text-dark ">
             Every pet deserves a loving home. By adopting, you are saving a life
             and gaining a lifelong friend. We are here to help you connect with
             your perfect companion!
-          </p>
+          </h4>
         </div>
       </div>
-      <div className="row">
-        {animals.map((animal, index) => (
-          <div className="col-md-4 mb-4" key={animal.id}>
-            <div
-              className="card animal-card shadow-sm"
-              style={{
-                backgroundColor: `hsl(${index * 36}, 70%, 90%)`,
-              }}
-            >
-              <img
-                className="card-img-top"
-                src={animal.img}
-                style={{
-                  height: "320px",
-                  objectFit: "cover",
-                  borderRadius: "10px 10px 0 0",
-                }}
-              />
-              <div className="card-body text-center">
-                <h5 className="card-title fw-bold">{animal.name}</h5>
-                <p className="mb-1">
-                  <strong>Breed:</strong> {animal.breed}
-                </p>
-                <p className="mb-1">
-                  <strong>Age:</strong> {animal.age}
-                </p>
-                <p className="text-success fw-bold">{animal.price}</p>
-                <button className="btn btn-primary mt-2 px-4">
-                  <Link to="/adopt" className="btn btn-primary">
+
+      <div className="row mt-4">
+        {animals.map((animal, index) => {
+          let aosEffect = "fade-up";
+          if (index % 3 === 0) aosEffect = "fade-right";
+          else if (index % 3 === 2) aosEffect = "fade-left";
+
+          return (
+            <div className="col-md-4 mb-4" key={animal.id} data-aos={aosEffect}>
+              <div
+                className="card animal-card pastel-card"
+                style={{ backgroundColor: `hsl(${index * 36}, 70%, 90%)` }}
+              >
+                <img
+                  className="card-img-top"
+                  src={animal.img}
+                  style={{
+                    height: "320px",
+                    objectFit: "cover",
+                    borderRadius: "10px 10px 0 0",
+                  }}
+                />
+                <div className="card-body text-center neon-hover-dark">
+                  <h5 className="card-title fw-bold">{animal.name}</h5>
+                  <p className="mb-1">
+                    <strong>Breed:</strong> {animal.breed}
+                  </p>
+                  <p className="mb-1">
+                    <strong>Age:</strong> {animal.age}
+                  </p>
+                  <p className="text-success fw-bold">{animal.price}</p>
+                  <Link
+                    to="/adopt"
+                    className="btn btn-success btn-lg neon-hover-dark"
+                  >
                     Adopt Me
                   </Link>
-                </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-      <div className="container"></div>
     </div>
   );
 };

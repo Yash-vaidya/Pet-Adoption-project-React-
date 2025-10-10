@@ -12,6 +12,7 @@ import AddAnimal from "./pages/admin/AddAnimal";
 import StockList from "./pages/admin/Stock";
 import SoldAnimals from "./pages/admin/Sold";
 import Footer from "./components/Footer";
+import Request from "./pages/admin/Request";
 
 const App = () => {
   return (
@@ -23,11 +24,15 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/adopt" element={<AdoptPet />} />
         <Route path="/admin" element={<AdminLogin />} />
+        
+        {/* follback routung */}
+        <Route path="*" element={<Home/>}/>
 
         {/* dashbord routign  */}
         <Route path="/admin/dashboard" element={<Dashboard />}>
           <Route path="add" element={<AddAnimal />} />
           <Route path="stock" element={<StockList />} />
+          <Route path="request" element={<Request />} />
           <Route path="sold" element={<SoldAnimals />} />
         </Route>
       </Routes>

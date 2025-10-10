@@ -5,6 +5,7 @@
   height: 80vh;
   position: relative;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -19,30 +20,24 @@
   padding: 20px;
   box-sizing: border-box;
 }
-.about-mission h2 {
+
+.about-mission h2,
+.about-services h2,
+.about-cta h2 {
   font-weight: 700;
-  color: #333;
   margin-bottom: 20px;
 }
 
-.about-mission p {
-  color: #555;
+.about-mission p,
+.about-services p,
+.about-cta p {
   font-size: 1.1rem;
   line-height: 1.7;
 }
-.about-services h2 {
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
-}
 
 .service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
 }
 
 .service-card h5 {
@@ -51,19 +46,7 @@
 }
 
 .service-card p {
-  color: #555;
   font-size: 1rem;
-  line-height: 1.6;
-}
-.about-cta h2 {
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.about-cta p {
-  color: #555;
-  font-size: 1.1rem;
   line-height: 1.6;
 }
 
@@ -79,4 +62,30 @@
 .about-cta a.btn:hover {
   background-color: #218838;
   transform: scale(1.05);
+}
+.neon-hover-dark {
+  color: #222;
+  transition: all 0.4s ease;
+}
+
+.neon-hover-dark:hover {
+  color: #90ee90;
+  text-shadow: 0 0 8px #90ee90, 0 0 15px #90ee90, 0 0 25px #32cd32,
+    0 0 50px #32cd32;
+  transform: scale(1.05);
+}
+.pastel-yellow {
+  background-color: #fff9c4;
+}
+
+.pastel-orange {
+  background-color: #ffe0b2;
+}
+
+.pastel-pink {
+  background-color: #ffd1dc;
+}
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
 }

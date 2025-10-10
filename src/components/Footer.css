@@ -1,50 +1,86 @@
 .footer {
-  background-color: #1f1f1f;
-  color: #eaeaea;
+  background: #000; /* pure black background */
+  color: #e0ffe0; /* soft light greenish white */
+  padding-top: 50px;
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
 }
 
+/* Headings with subtle neon glow */
 .footer h5 {
-  color: #4CAF50;
-  margin-bottom: 1rem;
+  color: #00ff99;
+  text-shadow: 0 0 8px #00ff99;
+  margin-bottom: 20px;
+  font-weight: bold;
+  position: relative;
 }
 
+/* Footer paragraph */
+.footer p {
+  color: #c7f7c7;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Quick Links */
 .footer-link {
-  color: #eaeaea;
+  color: #bfffc4;
   text-decoration: none;
-  transition: 0.3s;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Glow effect on hover */
 .footer-link:hover {
-  color: #4CAF50;
-  text-decoration: underline;
+  color: #00ff99;
+  text-shadow: 0 0 8px #00ff99, 0 0 15px #00ff99;
+  letter-spacing: 0.5px;
 }
 
+/* Divider line */
+.footer hr {
+  border-top: 1px solid rgba(0, 255, 100, 0.2);
+}
+
+/* Social icons */
 .social-icons a {
-  color: #eaeaea;
-  font-size: 1.2rem;
-  transition: 0.3s;
+  color: #bfffc4;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-  color: #4CAF50;
+  color: #00ff99;
+  text-shadow: 0 0 8px #00ff99, 0 0 15px #00ff99;
   transform: scale(1.2);
 }
 
-.footer p {
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+/* Copyright section */
+.footer .text-center {
+  color: #aaffaa;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
-hr {
-  border-color: rgba(255, 255, 255, 0.2);
+/* Neon border line glowing animation */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ff99, transparent);
+  animation: slideLine 4s infinite linear;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    text-align: center;
+@keyframes slideLine {
+  0% {
+    left: -100%;
   }
-
-  .social-icons {
-    justify-content: center;
+  100% {
+    left: 100%;
   }
 }

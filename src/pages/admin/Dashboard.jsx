@@ -19,6 +19,9 @@ const Dashboard = () => {
           <Link to="sold" className="btn btn-success">
             Sold Animals
           </Link>
+          <Link to="request" className="btn btn-success">
+            Requst's
+          </Link>
         </div>
         <div className="hero">
           <p>
