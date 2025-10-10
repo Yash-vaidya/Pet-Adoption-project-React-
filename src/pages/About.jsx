@@ -6,7 +6,6 @@ const About = () => {
     <>
       <div className="about-container">
         <div className="about-container-img">
-          {/* Hero Section */}
           <div className="overlay d-flex align-items-center justify-content-center">
             <div className="text-center text-white ">
               <h1 className="display-4 fw-bold">We Love Animals </h1>
@@ -19,7 +18,6 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* Mission Section */}
         <div className="container my-5 about-mission">
           <h2 className="text-center">Our Mission</h2>
           <p className="text-center">
@@ -28,8 +26,6 @@ const About = () => {
             ownership and create a safer environment for all animals.
           </p>
         </div>
-
-        {/* Services Section */}
         <div className="container my-5 about-services">
           <h2 className="text-center mb-4">What We Do</h2>
           <div className="row text-center">
@@ -68,8 +64,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* Call to Action */}
         <div className="container my-5 text-center about-cta">
           <h2>Join Our Cause</h2>
           <p>

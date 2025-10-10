@@ -8,7 +8,7 @@ import coco from "../assets/imgs/coco.png";
 import bull from "../assets/imgs/Bulldog.png";
 import luna from "../assets/imgs/SiameseCat.png";
 import Retriever from "../assets/imgs/GoldenRetriever.png";
-import popat from "../assets/imgs/Parrot1.png";
+import popat from "../assets/imgs/parrot1.png";
 import german from "../assets/imgs/german.png";
 import Beagle from "../assets/imgs/Beagle.png";
 

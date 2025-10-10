@@ -19,7 +19,6 @@
   padding: 20px;
   box-sizing: border-box;
 }
-/* Mission Section */
 .about-mission h2 {
   font-weight: 700;
   color: #333;
@@ -31,8 +30,6 @@
   font-size: 1.1rem;
   line-height: 1.7;
 }
-
-/* Services Section */
 .about-services h2 {
   font-weight: 700;
   color: #333;
@@ -58,8 +55,6 @@
   font-size: 1rem;
   line-height: 1.6;
 }
-
-/* Call-to-Action Section */
 .about-cta h2 {
   font-weight: 700;
   color: #333;
