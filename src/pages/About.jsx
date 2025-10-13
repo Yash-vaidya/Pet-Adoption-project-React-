@@ -11,11 +11,11 @@ const About = () => {
               <h1 className="display-4 fw-bold neon-hover-dark text-light">
                 We Love Animals
               </h1>
-              <p className="lead mt-3 neon-hover-dark text-light">
+              <h1 className="lead mt-3 neon-hover-dark text-light">
                 At Pet Adoption, we believe every animal deserves a loving home.
                 Join us in making the world a better place for our furry and
                 feathered friends.
-              </p>
+              </h1>
             </div>
           </div>
         </div>
