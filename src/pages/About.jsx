@@ -9,7 +9,10 @@ const About = () => {
           <div className="overlay d-flex align-items-center justify-content-center">
             <div className="text-center">
               <h1 className="display-4 fw-bold neon-hover-dark text-light">
-                We Love Animals
+                We Love Animals 🐶
+              </h1>
+              <h1 className=" display-4 fw-bold neon-hover-dark text-light ">
+                We Protect Life 🫀
               </h1>
               <h1 className="lead mt-3 neon-hover-dark text-light">
                 At Pet Adoption, we believe every animal deserves a loving home.
