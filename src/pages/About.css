@@ -89,3 +89,47 @@
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
 }
+
+/* ***************************************************************** */
+.about-container-img {
+  background: url("../assets/imgs/slide1.png") center/cover no-repeat;
+  height: 65vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.45);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 575.98px) {
+
+  .about-container-img {
+    height: 48vh;
+  }
+  .display-6 {
+    font-size: 1.4rem; 
+  }
+  .lead {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+ 
+  .about-container-img {
+    height: 55vh;
+  }
+  .display-6 {
+    font-size: 1.6rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+}
+.card-body {
+  padding: 1.25rem;
+}

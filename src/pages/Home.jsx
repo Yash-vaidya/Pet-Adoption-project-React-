@@ -42,7 +42,7 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <div className="home-container">
       <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button
@@ -68,30 +68,19 @@ const Home = () => {
         </div>
 
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src={slide3}
-              className="d-block w-100"
-              alt="Slide 1"
-              style={{ height: "90vh", objectFit: "cover" }}
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={slide2}
-              className="d-block w-100"
-              alt="Slide 2"
-              style={{ height: "90vh", objectFit: "cover" }}
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={slide1}
-              className="d-block w-100"
-              alt="Slide 3"
-              style={{ height: "90vh", objectFit: "cover" }}
-            />
-          </div>
+          {[slide3, slide2, slide1].map((img, index) => (
+            <div
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
+              key={index}
+            >
+              <img
+                src={img}
+                className="d-block w-100 img-fluid"
+                alt={`Slide ${index + 1}`}
+                style={{ height: "80vh", objectFit: "cover" }}
+              />
+            </div>
+          ))}
         </div>
 
         <button
@@ -100,10 +89,7 @@ const Home = () => {
           data-bs-target="#homeCarousel"
           data-bs-slide="prev"
         >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Previous</span>
         </button>
         <button
@@ -112,31 +98,31 @@ const Home = () => {
           data-bs-target="#homeCarousel"
           data-bs-slide="next"
         >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <marquee direction="right">
-        <h1 className="neon-hover-dark text-uppercase">
-          get your best-freand hear{" "}
-        </h1>
-      </marquee>
-      <section className="container my-5">
+      <div className="my-3">
+        <marquee direction="right">
+          <h2 className="neon-hover-dark text-uppercase text-center px-2">
+            Get your best friend here 
+          </h2>
+        </marquee>
+      </div>
+      <section className="container my-5 px-3 px-sm-5">
         <h2 className="text-center mb-4 neon-hover-dark">
           Welcome to Pet Adoption
         </h2>
-        <h4 className="text-center">
+        <h5 className="text-center text-muted fw-normal">
           We are dedicated to finding loving homes for animals. Explore our
           collection of adorable pets ready to be adopted. Join our community
           and make a difference in an animal’s life!
-        </h4>
+        </h5>
       </section>
       <section className="container my-5">
-        <h2 className="mb-4 neon-hover-dark text-center">Featured Animals</h2>
-        <div className="row">
+        <h2 className="text-center mb-4 neon-hover-dark">Featured Animals</h2>
+
+        <div className="row g-4 justify-content-center">
           {featuredAnimals.map((animal, index) => {
             let aosEffect = "fade-up";
             if (index === 0) aosEffect = "fade-right";
@@ -144,24 +130,29 @@ const Home = () => {
 
             return (
               <div
-                className="col-md-4 mb-4"
+                className="col-12 col-sm-6 col-md-4"
                 key={animal.id}
                 data-aos={aosEffect}
               >
-                <div className="card pastel-card h-100 shadow-sm">
+                <div className="card pastel-card h-100 shadow-sm text-center">
                   <img
                     src={animal.img}
-                    className="card-img-top"
+                    className="card-img-top img-fluid"
                     alt={animal.name}
+                    style={{
+                      objectFit: "contain",
+                      height: "230px",
+                      padding: "1rem",
+                    }}
                   />
-                  <div className="card-body text-center">
-                    <h5 className="card-title neon-hover-dark">
+                  <div className="card-body">
+                    <h5 className="card-title neon-hover-dark fw-bold">
                       {animal.name}
                     </h5>
                     <p className="card-text">{animal.desc}</p>
                     <Link
                       to="/adopt"
-                      className="btn btn-success btn-lg neon-hover-dark"
+                      className="btn btn-success btn-lg neon-hover-dark mt-2"
                     >
                       Adopt Me
                     </Link>
@@ -172,7 +163,6 @@ const Home = () => {
           })}
         </div>
       </section>
-
       <About />
       <Contact />
     </div>

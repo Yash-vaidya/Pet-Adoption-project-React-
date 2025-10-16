@@ -47,6 +47,15 @@
       "price": "30000",
       "stock": "12",
       "img": ""
+    },
+    {
+      "id": "88ab",
+      "name": "Goat ",
+      "age": "6 months",
+      "breed": "kashmiri goat",
+      "price": "30000",
+      "stock": "40",
+      "img": ""
     }
   ],
   "adoptions": [
@@ -65,6 +74,14 @@
       "mobile": "9422189146",
       "photo": "24377-2560x1600-desktop-hd-dog-wallpaper.jpg",
       "animal": "Beagle"
+    },
+    {
+      "id": "10f6",
+      "name": "prashik abhore",
+      "email": "prashikambhore@gmail.com",
+      "mobile": "7418529635",
+      "photo": "photo.jpg",
+      "animal": "Bulldog"
     }
   ],
   "sold": [

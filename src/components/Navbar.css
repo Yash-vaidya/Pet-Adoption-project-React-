@@ -1,37 +1,28 @@
-/* Navbar base */
 .custom-navbar {
-  background-color: #000; /* Black background */
+  background-color: #000; 
   padding: 0.8rem 1rem;
 }
-
-/* Brand text */
 .navbar-brand {
   font-size: 1.6rem;
   font-weight: bold;
 }
-
-/* Common neon style for all nav text */
 .neon-link,
 .neon-text {
   position: relative;
-  color: #90ee90 !important; /* Light green base color */
+  color: #90ee90 !important; 
   text-decoration: none;
   font-size: 1.1rem;
   margin-left: 15px;
   transition: all 0.4s ease;
 }
-
-/* Neon hover glow */
 .neon-link:hover,
 .neon-text:hover {
-  color: #b6ffb6 !important; /* Softer green when glowing */
+  color: #b6ffb6 !important; 
   animation: neonFlicker 1.5s infinite alternate;
   text-shadow: 0 0 5px #90ee90, 0 0 10px #90ee90, 0 0 20px #32cd32,
     0 0 40px #32cd32, 0 0 80px #32cd32;
   transform: scale(1.05);
 }
-
-/* Neon flicker animation */
 @keyframes neonFlicker {
   0%,
   100% {
@@ -43,8 +34,6 @@
       0 0 80px #32cd32, 0 0 160px #32cd32;
   }
 }
-
-/* No box or background ever */
 .nav-link,
 .navbar-brand {
   background: none !important;
